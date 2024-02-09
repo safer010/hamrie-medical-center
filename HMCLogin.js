@@ -34,7 +34,7 @@ function login (event)
         if (username.value == "hamrie101")
         {
             console.log("Correct Username");
-            window.location.href = "http://127.0.0.1:5500/assignment1/HMCForm.html";
+            window.location.href = "HMCForm.html";
         }
 
         else
