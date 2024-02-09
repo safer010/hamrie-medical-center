@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamrie Medical Center Form</title>
+
+    <style>
+
+
+        body 
+        {
+           background-color: #B8D2E4;
+           margin: 0px;
+           padding: 0px;
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        form
+        {
+            height: 115vh;
+            border: 50px solid #FBF6F1;
+            background-color: #FBF6F1;
+            border-radius: 50px;
+        }
+
+        .subH
+        {
+            text-align: center;
+            margin-left: 2%;
+        }
+
+        .subH2
+        {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .subH4
+        {
+            margin-top: -63%;
+            margin-bottom: 20px;
+        }
+
+        .subh4
+        {
+            margin-left: 5%;
+        }
+
+
+        .main
+        {
+           width: 75%;
+           margin: auto;
+        }
+
+        button
+        {
+            width: 10%;
+            height: 20%;
+            margin-right: 10px;
+        }
+
+        .btn
+        {
+            margin: auto;
+            margin-top: 50%;
+            text-align: center;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+
+        .personalinfo label
+        {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment
+        {
+            background-color: #B8D2E4;
+            width: 200px;
+            height: 40px;
+            border: rgb(56, 56, 56);
+        }
+
+        .personalinfo input
+        {
+            background-color: #B8D2E4;
+            width: 500px;
+            height: 40px;
+            border: rgb(56, 56, 56);
+        }
+
+        .personalinfo
+        {
+            float: left;
+            margin-left: 5%;
+        }
+
+        .otherinfo select
+        {
+            background-color: #B8D2E4;
+            border: rgb(56, 56, 56);
+            width: 200px;
+        }
+
+
+        .otherinfo
+        {
+            float: right;
+            margin-right: 10%;
+        }
+
+        
+        
+
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+    
+    
+        <h1 class="subH">Hamrie Medical Center</h1>
+
+        <form id="form2">
+
+            <h2 class="subH2">Patient Form</h2>
+            <h4 class="subh4">Personal Information</h4>
+
+
+            <label for="gender" class="subh4">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male"><label for="male" required > Male</label> 
+            <input type="radio" id="female" name="gender" value="female"><label for="female" required>Female</label> <br><br>
+            <div id="genderAnswer"></div>
+            
+            <div class="personalinfo">
+
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" class="fname" value="" placeholder="Enter First Name" required>
+
+                <label for="mname">Middle Name:</label>
+                <input type="text" id="mname" class="mname" value="" placeholder="Enter Middle Name" required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" class="lname" value="" placeholder="Enter Last Name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" class="address" value="" placeholder="Enter Address" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="number" id="mobile" class="mobile" value="" placeholder="0000-111-2222" required>
+
+                <label for="bdate">Birth Date:</label>
+                <input type="date" id="bdate" class="bdate" value="" placeholder="0000-111-2222" required>
+                
+            </div>
+
+            <br><br>
+            
+            <div class="otherinfo">
+
+                <h4 class="subH4"> Medical Information</h4>
+
+                <p>Medical History</p>
+                <input type="checkbox" class="medicalH" id="asthma" name="asthma" value="asthma"><label for="asthma">Asthma</label> <br>
+                <input type="checkbox" class="medicalH" id="cancer" name="cancer" value="cancer"><label for="cancer">Cancer</label> <br>
+                <input type="checkbox" class="medicalH" id="cardiac disease" name="cardiac disease" value="cardiac disease" ><label for="cardiac disease">Cardiac Disease</label> <br>
+                <input type="checkbox" class="medicalH" id="diabetes" name="diabetes" value="diabetes"><label for="diabetes">Diabetes</label> <br>
+                <input type="checkbox" class="medicalH" id="hypertension" name="hypertension" value="hypertension"><label for="hypertension">Hypertension</label> <br>
+                <input type="checkbox" class="medicalH" id="psychiatricdisorder" name="psychiatricdisorder" value="psychiatricdisorder"><label for="psychiatricdisorder">Psychiatric Disorder</label> <br>
+                <input type="checkbox" class="medicalH" id="epilepsy" name="epilepsy" value="epilepsy"><label for="epilepsy">Epilepsy</label> <br>
+                <input type="checkbox" class="medicalH" id="others" name="others" value="others"><label for="others">Others</label> <br>
+                <input type="checkbox" class="medicalH" id="none" name="none" value="none"><label for="none">None</label> <br> <br>
+                <div id="medicalHAnswer"></div>
+
+                <label for="symptoms">Current Symptoms:</label> <br><br>
+                <select name="symptoms" id="symptoms" multiple> 
+                    <option id="chestpain" value="chest pain"> Chest Pain</option>
+                    <option id="respiratory" value="respiratory"> Respiratory</option>
+                    <option id="hematological" value="hematological"> Hematological</option>
+                    <option id="lymphatic" value="lymphatic"> Lymphatic</option>
+                    <option id="gastrointestinal" value="gastrointestinal"> Gastrointestinal</option>
+                    <option id="neurological" value="neurological"> Neurological</option>
+                    <option id="weightloss" value="weight loss"> Weight Loss</option>
+                </select><br><br>
+
+                <div id="medicationData">
+                    <label for="medication">Are you taking medications:</label> <br> <br>
+                    <input type="radio" id="yes" name="medication" value="yes"><label for="yes" > Yes</label> 
+                    <input type="radio" id="no" name="medication" value="no" ><label for="no"> No</label> <br><br>
+                    <input type="text" id="comment" class="comment" value="">
+                    <div id="medicationAnswer"></div>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button id="button5" value="logout"><a href="index.html">Logout</a></button>
+                <button type="submit" id="button3" value="submit">Submit</button>
+                <button type="reset" id="button4" value="reset">Clear</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="HMCForm.js"></script>
+</body>
+                
+</html>
